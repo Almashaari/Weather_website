@@ -6,34 +6,28 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <title>Weather</title>
 </head>
-<% if (error) { %>
-    <p>Error: <%= error %></p>
-  <% } else if (weather) { %>
-
+<body>
     <div class = "card">
         <div class="search">
-            <form class="inputForm" action="/weather" method="get">
-                <input type="text" placeholder="enter city name"  name="city">
-                <button type="submit"><img src="/images/search.png" alt="search icon"></button>
-            </form>
-            
+            <input type="text" placeholder="enter city name" spellcheck="false">
+            <button><img src="/images/search.png" alt="search icon"></button>
         </div>
         <div class="weather">
-            <img src="/images/clear.png"  class="weather-icon"> 
-            <h1 class="temp"> <%= weather.main.temp %>°C</h1>
-                <h2 class="city"> <%= weather.name %> </h2>
+            <img src="/images/rain.png"  class="weather-icon"> 
+            <h1 class="temp">22°C</h1>
+            <h2 class="city">Doha</h2>
             <div class="details">
                 <div class="col">
                     <img src="/images/humidity.png" >
                     <div>
-                        <p class="humidity"><%= weather.main.humidity %>%</p>
+                        <p class="humidity">50%</p>
                         <p>Humidity</p>
                     </div>
                 </div>
                 <div class="col">
                     <img src="/images/wind.png" >
                     <div>
-                        <p class="wind"><%= weather.wind.speed %> km/h</p>
+                        <p class="wind">15 km/h</p>
                         <p>wind speed</p>
                     </div>
                 </div>
@@ -41,5 +35,5 @@
         </div>
     </div>
 
-    <% } %>
+</body>
 </html>
